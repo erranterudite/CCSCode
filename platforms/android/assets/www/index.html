@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        /*<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">*/
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+       <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script type="text/javascript" src="cordova.js"></script>
+        <link rel="stylesheet" href="themes/OSUCCS.min.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile-1.4.5.css" />
+    
+		<script src="js/jquery1.11.1.js"></script>
+		<script src="js/jquery.mobile-1.4.5.js"></script>
+    	 <script type="text/javascript" src="js/index.js"></script>   
+        <title>Hello World</title>
+    </head>
+ <body>
+        <div data-role="page" id="home">
+	<div class="whitebar">
+		<a href = "#home"><img class = "ccslogo" src="img/logo-ccs.png" ></a>
+    </div>
+    <div class="blackbar"></div>	
+    <div data-role="content" >
+    
+    <div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all">
+    
+ 
+<!--			<div data-role="collapsible-set" >
+					<div data-role="collapsible" data-iconpos="right">
+						<h3>Welcome</h3>
+						<p>Welcome to Counseling and Consultation Service (CCS).  We provide counseling and consultation to currently enrolled undergraduate, graduate and professional students. We are located on the <a href="#" onclick="var ref = window.open('https://www.google.com/maps/place/1640+Neil+Ave/@39.994942,-83.0144281,17z', '_blank', 'location=yes,toolbar=yes');" data-icon="info" data-iconpos="left">4th Floor of the Younkin Success Center, 1640 Neil Ave. Columbus, OH, 43210</a>
+                        </p>
+					</div>
+					<div data-role="collapsible" data-iconpos="right">
+						<h3>We Can Help With...</h3>
+                        						<ul>
+                        <li>Individual Counseling</li>
+                        <li>Group Counseling</li>
+                        <li>Psychiatry</li>
+                        <li>Nutritional Counseling</li>
+                        <li>Couple's Counseling</li>
+                        <li>Outreach</li>
+                        <li>Workshops</li>
+                        <li>Crisis debriefing</li>
+                        <li>Consultation for faculty, staff, and loved ones</li>
+                        <li>Community Referrals</li>
+                        </ul>
+                        <h4> For: </h4>
+                        <ul>
+                        <li>Stress Management</li>
+                        <li>Anxiety</li>
+                        <li>Depression</li>
+                        <li>Relationship Problems</li>
+                        <li>Transitions in Life</li>
+                        <li>Identity Exploration</li>
+                        <li>Substance Use</li>
+                        <li>Eating Concerns</li>
+                        <li>Feeling Overwhelmed</li>
+                        <li>Academic Problems</li>
+                        </ul>
+					</div>
+                    <div data-role="collapsible" data-iconpos="right">
+						<h3>Reach Out</h3>
+						<div data-role="controlgroup">
+                			<a href="tel:614-292-5766" data-role="button" data-icon="info" data-iconpos="left">Call Us</a>
+                			<a href="tel:1-800-273-8255" data-role="button" data-icon="info" data-iconpos="left">National Suicide Prevention Lifeline</a>
+               				<a href="#" data-role="button" onclick="var ref = window.open('http://ccs.osu.edu', '_blank', 'location=yes,toolbar=yes');" data-icon="info" data-iconpos="left">Visit Our Website</a> 
+                		</div>
+					</div>
+ 		
+                    
+
+                    
+                    
+				</div>-->
+<div data-role="controlgroup" data-icon="false">
+               <a href="tel:614-292-5766" data-role="button" data-icon="phone">Call Us</a>
+               
+               <a href="#appointment" data-role="button" data-icon="false">Make an Appointment</a> 
+               <a href="#" data-role="button" onclick="var ref = window.open('https://www.google.com/maps/place/Younkin+Success+Center/@39.994852,-83.014314,17z', '_system', 'location=no,toolbar=yes');" data-icon="navigation">Younkin Success Center</a> 
+               <a href="#" data-role="button" onclick="var ref = window.open('https://www.google.com/maps/place/Lincoln+Tower,+1800+Cannon+Dr,+Columbus,+OH+43210/@39.9984568,-83.0241574,17z', '_system', 'location=no,toolbar=yes');" data-icon="navigation">Lincoln Tower (10th floor)</a> 
+               <a href="#" data-role="button" onclick="var ref = window.open('http://ccs.osu.edu', '_blank', 'location=no,toolbar=yes');" data-icon="cloud">Visit Our Website</a>
+
+                </div>
+
+<div data-role="controlgroup" data-icon="false">
+                <a href="#wait" data-role="button" data-icon="false">While You Wait</a>
+                <a href="#busting" data-role="button" data-icon="false">Stress Busting</a>
+               <a href="#hacks" data-role="button" data-icon="false">Happiness Hacks</a> 
+               <a href="#feel" data-role="button" data-icon="false">Feel Better Fast</a> 
+                </div>
+
+                
+		</div>
+
+	            
+		
+	</div>
+    <div data-role="footer" data-position="fixed" data-fullscreen="true">
+		<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#help">Emergency</a></li>
+
+		</ul>
+	</div><!-- /navbar -->
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<div data-role="page" id="appointment">
+	<div class="whitebar">
+		<a href = "#home"><img class = "ccslogo" src="img/logo-ccs.png" ></a>
+    </div>
+    <div class="blackbar"></div>	
+    <div data-role="content" >
+    
+    	<div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all">
+<p>To schedule an appointment, please complete the online registration.  Please have your current schedule available before scheduling your phone screening appointment.</p>
+<a href="#" data-role="button" onclick="var ref = window.open('http://ccs.osu.edu/secure/appointments/', '_system', 'location=no,toolbar=yes');" data-icon="cloud">Schedule an Appointment</a>
+<p>If you feel this is an urgent matter that cannot wait until your scheduled phone screening,  you are rescheduling an appointment, or if you do not have a phone and need an in-person appointment, please call us during business hours. </p>
+
+<a href="tel:614-292-5766" data-role="button" data-icon="phone">Call Us</a>
+           
+
+						<h3>We Can Help With...</h3>
+                        						<ul>
+                        <li>Individual Counseling</li>
+                        <li>Group Counseling</li>
+                        <li>Psychiatry</li>
+                        <li>Nutritional Counseling</li>
+                        <li>Couple's Counseling</li>
+                        <li>Outreach</li>
+                        <li>Workshops</li>
+                        <li>Crisis debriefing</li>
+                        <li>Consultation for faculty, staff, and loved ones</li>
+                        <li>Community Referrals</li>
+                        </ul>
+                        <h4> For: </h4>
+                        <ul>
+                        <li>Stress Management</li>
+                        <li>Anxiety</li>
+                        <li>Depression</li>
+                        <li>Relationship Problems</li>
+                        <li>Transitions in Life</li>
+                        <li>Identity Exploration</li>
+                        <li>Substance Use</li>
+                        <li>Eating Concerns</li>
+                        <li>Feeling Overwhelmed</li>
+                        <li>Academic Problems</li>
+                        </ul>
+<br>
+<br>
+<br>
+		</div>
+
+	            	
+			
+	</div>
+    <div data-role="footer" data-position="fixed" data-fullscreen="true">
+		<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#help">Emergency</a></li>
+
+		</ul>
+	</div><!-- /navbar -->
+	</div>
+</div>
+
+
+
+<div data-role="page" id="wait">
+	<div class="whitebar">
+		<a href = "#home"><img class = "ccslogo" src="img/logo-ccs.png" ></a>
+    </div>
+    <div class="blackbar"></div>	
+    <div data-role="content" >
+    
+    	<div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all">
+<div data-role="collapsible-set" >
+					
+					<div data-role="collapsible">
+						<h3>Go to a Drop In Workshop</h3>
+						<p>We have weekly drop-in workshops as well as an extensive group program that offers 25+ groups each semester to meet individual needs. 
+                         
+                        
+                        </p>
+<a href="#" data-role="button" onclick="var ref = window.open('http://www.ccs.ohio-state.edu/groups/drop-in-workshops/', '_blank', 'location=no,toolbar=yes');" data-icon="cloud">Workshop List</a>
+					</div>
+
+					<div data-role="collapsible">
+						<h3>Try Other Resources</h3>
+						<p>Other facilities that offer therapeutic or other resources to both students and community residents:</p>
+                      <a href="#" data-role="button" onclick="var ref = window.open('http://swc.osu.edu/', '_system', 'location=no,toolbar=yes');" data-icon="cloud">Student Wellness Center</a>  
+<a href="#" data-role="button" onclick="var ref = window.open('http://www.psy.ohio-state.edu/psc/', '_system', 'location=no,toolbar=yes');" data-icon="cloud">Psychological Services Center</a> 
+<a href="tel:614-292-3671" data-role="button" data-icon="phone">Couples & Family Clinic</a>
+<a href="tel:614-293-9600" data-role="button" data-icon="phone">OSU Harding</a>
+                        
+
+
+
+					</div>
+					<div data-role="collapsible">
+						<h3>CCS Social Media</h3>
+                        <a href="#" onclick="var ref = window.open('https://www.youtube.com/user/osuccs', '_system', 'location=no,toolbar=yes');" ><img src="img/Youtube.png" width="250" height="60" alt=""/></a>
+                        
+
+                       <a href="#" onclick="var ref = window.open('https://www.facebook.com/OSUCCS', '_system', 'location=no,toolbar=yes');" ><img src="img/facebook.png" width="250" height="60" alt=""/> </a>
+ 
+                        <a href="#"  onclick="var ref = window.open('https://www.pinterest.com/osucounseling/', '_system', 'location=no,toolbar=yes');" ><img src="img/Pinterest.png" width="250" height="60" alt=""/> </a>
+ 
+                        <a href="#"  onclick="var ref = window.open('https://twitter.com/OSUCCS', '_system', 'location=no,toolbar=yes');" ><img src="img/Twitter.png" width="250" height="60" alt=""/></a>
+</p>
+
+					</div>
+
+
+
+
+				</div>
+		</div>
+
+	           	
+		
+	</div>
+    <div data-role="footer" data-position="fixed" data-fullscreen="true">
+		<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#help">Emergency</a></li>
+
+		</ul>
+	</div><!-- /navbar -->
+	</div>
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+<div data-role="page" id="busting">
+	<div class="whitebar">
+		<a href = "#home"><img class = "ccslogo" src="img/logo-ccs.png" ></a>
+    </div>
+    <div class="blackbar"></div>	
+    <div data-role="content" >
+    
+    	<div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all">
+
+		<h4>Feeling Anxious?  Here are several ways to reduce your anxiety right now:</h4>
+        
+        <div data-role="controlgroup" data-icon="false">
+                <a href="#" data-role="button" onclick="var ref = window.open('http://techandbehavior.com/DeepBreathing.mp3', '_blank', 'location=no');" data-icon="cloud">Deep Breathing Exercise</a>
+                <a href="#breath" data-role="button" data-icon="false">Breath Visualization</a>
+                <a href="#" data-role="button" onclick="var ref = window.open('http://techandbehavior.com/TestAnxiety.mp3', '_blank', 'location=no');" data-icon="cloud">Test Anxiety Buster</a> 
+               <a href="#" data-role="button" onclick="var ref = window.open('http://techandbehavior.com/shortenedjames1.mp3', '_blank', 'location=no');" data-icon="cloud">Muscle Relaxation</a>
+				<a href="#" data-role="button" onclick="var ref = window.open('https://www.youtube.com/watch?v=Bfsy7cjTRSk', '_blank', 'location=no');" data-icon="cloud">Stress Busters Video</a>
+
+                                       
+                </div>      
+      
+		</div>
+
+		        	
+		
+	</div>
+    <div data-role="footer" data-position="fixed" data-fullscreen="true">
+		<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#help">Emergency</a></li>
+
+		</ul>
+	</div><!-- /navbar -->
+	</div>
+</div>
+
+
+
+
+
+
+
+<div data-role="page" id="breath">
+	<div class="whitebar">
+		<a href = "#home"><img class = "ccslogo" src="img/logo-ccs.png" ></a>
+    </div>
+    <div class="blackbar"></div>	
+    <div data-role="content" >
+    
+    	<div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all">
+ 
+		<p> Take control of your breath to take control of your stress!  Slide the bar to find a comfortable rhythm. Match your breath to the visualization, making sure to breath deeply from your abdomen.</p>
+		<form>
+    <input type="range" name="slider-1" id="sliderWeight" min="5" max="20" value="10" >
+    <div id="dog" style="background:#E00003;height:100px;width:100px;margin-left: auto;margin-right: auto;">
+</div>
+</form>
+</div>
+
+	            	
+		
+	</div>
+    <div data-role="footer" data-position="fixed" data-fullscreen="true">
+		<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#help">Emergency</a></li>
+
+		</ul>
+	</div><!-- /navbar -->
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div data-role="page" id="hacks">
+	<div class="whitebar">
+		<a href = "#home"><img class = "ccslogo" src="img/logo-ccs.png" ></a>
+    </div>
+    <div class="blackbar"></div>	
+    <div data-role="content" >
+    
+    	<div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all">
+<p>Feeling down or in a funk?  Here are several ways to hack into happiness.  These techniques are drawn from positive psychology and can change your mood from funk to fulfilled</p>
+				<div data-role="collapsible-set" >
+
+					<div data-role="collapsible">
+						<h3>Gratitude Journal</h3>
+						<p>Studies have shown that cultivating gratitude is a good way to improve your mood, energy, and relationships.  Start a gratitude journal today, either the old fashioned way with a paper and pen, or through a website that allows you to share your gratitude with others: 
+                        <a href="#" data-role="button" onclick="var ref = window.open('http://gratefulness.org/', '_system', 'location=no,toolbar=yes');" data-icon="cloud">http://gratefulness.org/</a> 
+</p>
+
+					</div>
+					<div data-role="collapsible">
+						<h3>Random Acts of Kindness</h3>
+						<p>Find one unexpected, kind thing to do for someone today and do it.  Be creative and have some fun with it.  Here are a few examples:
+                        <ul>
+<li>Feed someone’s parking meter</li>
+<li>Pay someone a compliment</li>
+<li>Buy someone a cup of coffee</li> 
+<li>Hold a door</li>
+<li>Smile and say hello</li>
+<li>Call a friend</li>
+<li>Pay for the next person's coffee</li>
+<li>Hand out a paper hearts that say  "Have a Nice Day!"</li>
+<li>Write nice comments on comment cards in restaurants</li>
+<li>Say please and thank you!</li>
+<li>Text your friends just to say hello</li>
+Smile!!
+<li>Let someone go ahead of you in grocery line (or any line)</li>
+<li>Pick up a piece of litter</li> 
+<li>Contribute to a food bank Donate</li> 
+<li>Share a music playlist with a friend – particularly one that’s inspiring / upbeat!</li>
+<li>Write uplifting notes on someone’s door board</li>
+<li>Attend a campus event – support your fellow students in their hard work!</li>
+</ul>
+</p>
+					</div>
+					<div data-role="collapsible">
+						<h3>Mindful Moment</h3>
+						<p>In our fast paced world, we don’t often slow down to fully appreciate and be present in the moment. Choose an activity and completely focus on this activity as slowly as you can.  For example, savoring what you eat.  Notice the shape, size, and color of a piece of fruit.  How it feels when you hold it, what it tastes like on your tongue and teeth when you chew.  What it sounds like when you bite into it.  Fully engage all of your senses on the experience of savoring that food.  Practice a mindful moment each day when you spent time, quietly savoring something.  Slow down!  </p>
+					</div>
+				</div>
+		
+		</div>
+
+	          	
+		
+	</div>
+    <div data-role="footer" data-position="fixed" data-fullscreen="true">
+		<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#help">Emergency</a></li>
+
+		</ul>
+	</div><!-- /navbar -->
+	</div>
+</div>
+
+  
+
+<div data-role="page" id="feel">
+	<div class="whitebar">
+		<a href = "#home"><img class = "ccslogo" src="img/logo-ccs.png" ></a>
+    </div>
+    <div class="blackbar"></div>	
+    <div data-role="content" >
+    
+    	<div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all">
+
+			        <div data-role="controlgroup" data-icon="false">
+                <a href="#" data-role="button" data-icon="false" onclick="var ref = window.open('http://techandbehavior.com/DeepBreathing.mp3', '_blank', 'location=no,toolbar=yes');" >Deep Breathing Exercise</a>
+               <a href="#" data-role="button" data-icon="false" onclick="var ref = window.open('http://techandbehavior.com/shortenedjames1.mp3', '_blank', 'location=no,toolbar=yes');" >Muscle Relaxation</a> 
+               <a href="#" data-role="button" data-icon="false" onclick="var ref = window.open('http://techandbehavior.com/beach.mp3', '_blank', 'location=no,toolbar=yes');" >Go to the Beach</a> 
+               <a href="#" data-role="button" data-icon="false" onclick="var ref = window.open('http://techandbehavior.com/Mountain.mp3', '_blank', 'location=no,toolbar=yes');" >Go to the Mountains</a>
+               <a href="#" onclick="var ref = window.open('http://www.pinterest.com/osucounseling/soul-music/', '_system', 'location=no,toolbar=yes');" data-role="button" data-icon="false" > Music Moment</a>
+                
+                
+                </div>
+                <div data-role="collapsible-set" >
+
+					<div data-role="collapsible">
+                  	<h3>Tap Your Senses</h3>
+                  	<p> 
+                    <ul>
+                    <li>Have a special treat (chocolate, hot tea, cold drink) mindfully. Enjoy each sip, bite, etc. </li>
+                    <li>Walk outside and smell the fresh air, light a candle or incense, use a new lotion or scent</li>
+                    <li>Look at nature, enjoy art, look at flowers, walk in your favorite part of town</li>
+                    <li>Take a bubble bath, pet an animal, swim in a pool, use comfortable sheets on your bed</li>
+                    <li>Listen to soothing music, use water noises in your home, be mindful of noises around you</li></ul>
+                    </p>	
+                  	</div>	
+						<div data-role="collapsible">
+                  	<h3>Improve the situation</h3>
+                  	<p>
+                    <ul>
+                    <li>We can’t always change the situation, but we can learn to make ourselves feel better about it.</li>
+
+					<li>Imagine feeling more in control where you are. What would this look like? How would it be different?</li>
+					<li>Search for meaning in the struggle (lemons ‡ lemonade)</li>
+					<li>Seek support from a higher power, God, or your own wise self</li>
+					<li>What do you find relaxing? Is it healthy? Engage in it!</li>	
+					<li>Simply focus on participating in one activity at a time – stay focused on the present.</li>	
+                  <li>Take a small vacation, whether it’s a walk around the block or a mini vacation in your head!</li>
+					<li>Encourage yourself! Talk with a friend, parent, teacher, therapist, or doctor who supports you!</li></ul>	
+                  	</div>
+                                     <div data-role="collapsible">
+                  	<h3>Accept the Situation</h3>
+                  	<ul><li>What do you enjoy? Go do something!</li>
+                  	<li>Give back! Volunteer, babysit, do something nice for another person.</li>	
+                  	<li>Compare where you are now with where you were before. Are you better?</li>	
+                  	<li>Connect with a different emotion – read, watch a movie, listen to music</li>	
+                  	<li>For just a moment - you can always come back to it when you’re more able.</li>	
+                  	<li>Count to 10, focus on something you enjoy - distract yourself so that you center</li>
+</ul>
+ 
+ 
+                 </div>  		
+		</div>
+
+	           	
+		<p>.</p>
+	</div>
+    </div>
+    <div data-role="footer" data-position="fixed" data-fullscreen="true">
+		<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#help">Emergency</a></li>
+
+		</ul>
+	</div><!-- /navbar -->
+	</div>
+</div>
+
+
+<div data-role="page" id= "help">
+	<div class="whitebar">
+		<a href = "#home"><img class = "ccslogo" src="img/logo-ccs.png" ></a>
+    </div>
+    <div class="blackbar"></div>	
+    <div data-role="content" >
+    
+    <div data-theme="a" data-form="ui-body-a" class="ui-body ui-body-a ui-corner-all">
+    <h4> If you are in immediate risk of harming yourself or others, please call 911 or go to the closest emergency room. 
+<div data-role="controlgroup" data-icon="false">
+                			<a href="tel:911" data-role="button" data-icon="phone">911</a>
+                			<a href="tel:1-800-273-8255" data-role="button" data-icon="phone">Suicide Prevention Lifeline</a>
+                         <a href="tel:614-293-9600" data-role="button" data-icon="phone">OSU Harding Hospital</a>
+               				<a href="#" data-role="button" onclick="var ref = window.open('https://www.google.com/maps/place/OSU-Harding+Behavioral+Medicine/@39.994748,-83.020298,17z', '_system', 'location=no,toolbar=yes');" data-icon="navigation">OSU Harding Hospital</a> 
+	            	<a href="tel:1-614-267-7020" data-role="button" data-icon="phone">Sexual Assault Response Network of Central Ohio</a>
+                    <a href="tel:1-614-276-2273" data-role="button" data-icon="phone">Netcare</a>
+                  
+		</div>
+        
+<h4>Please call us during business hours to schedule an appointment</h4>
+                			<a href="tel:614-292-5766" data-role="button" data-icon="phone">Call Us</a>
+	<p><br>.</p>
+    </div>
+    <div data-role="footer" data-position="fixed" data-fullscreen="true">
+		<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#help">Emergency</a></li>
+
+		</ul>
+	</div><!-- /navbar -->
+	</div>
+</div><!-- /page -->  
+    </body>
+</html>
+
